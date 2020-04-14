@@ -16,7 +16,13 @@ RUN unzip nexus-repository-helm.zip && cd nexus-repository-helm-master && mvn -P
 FROM sonatype/nexus3
 COPY --from=helmkar nexus-repository-helm-master/target/*.kar $NEXUS_HOME/deploy
 ```
+build and tag image nexus
+```
+docker build -f nexus-helm.Dockerfile -t nexus3-helm .
+docker run --name nexus-helm -d -p 8081:8081 nexus3-helm
+```
 install nexus with helm
+
 ```
 helm install nexus stable/sonatype-nexus
 ```
