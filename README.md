@@ -3,7 +3,7 @@
 ## install jenkins in your cluster k8s
 
 ```
-helm install my-jenkins --set master.healthProbes=false --set persistence.storageClass=nfs-client stable/jenkins
+helm install my-jenkins --set master.healthProbes=false --set master.serviceType=NodePort --set persistence.storageClass=nfs-client stable/jenkins
 ```
 
 N.B : to disable liveness and rideness helt check add --set master.healthProbes=false
