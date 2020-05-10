@@ -83,6 +83,15 @@ spec:
       targetPort: 8081
       nodePort: 32000
 ```
+Access For Nexus 2 ,please change @ip
+
+http://35.144.130.153:32000/nexus
+
+Access For Nexus 3,please change @ip
+
+http://35.144.130.153:32000
+
+Note: The default username and password will be admin & admin123
 
 https://devopscube.com/setup-nexus-kubernetes/
 
