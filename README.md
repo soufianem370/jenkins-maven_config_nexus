@@ -1,13 +1,17 @@
-# integrate nexus to maven/jenkins
+# install and integrate nexus/jenkins/sonarqube/ on kubernetes:
 
-install jenkins(in your instance jenkins install git and maven
+## install jenkins in your cluster k8s
 
 ```
-helm install my-release --set persistence.storageClass=nfs-client stable/jenkins
+helm install my-jenkins --set master.healthProbes=false --set persistence.storageClass=nfs-client stable/jenkins
 ```
+
+N.B : to disable liveness and rideness helt check add --set master.healthProbes=false
+
 watch this videos for more details: https://www.youtube.com/watch?v=qbO4MTESiJQ
 
-## pour installer nexus ---todo
+## pour installer nexus on K8s
+
 ### 1)create pvc
 ```
 apiVersion: v1
