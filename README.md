@@ -104,5 +104,11 @@ Note: The default username and password will be admin & admin123
 
 https://devopscube.com/setup-nexus-kubernetes/
 
+### integrate nexus with jenkins
+
+install plugin : Nexus Artifact Uploader
+
+https://www.coachdevops.com/2019/10/jenkins-nexus-integration-how-to.html
+
 ## sonarqube --todo
 https://medium.com/@akamenev/running-sonarqube-on-azure-kubernetes-92a1b9051120
