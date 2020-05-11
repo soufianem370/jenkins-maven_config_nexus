@@ -3,10 +3,15 @@
 ## install jenkins in your cluster k8s
 
 ```
-helm install my-jenkins --set master.healthProbes=false --set master.serviceType=NodePort --set persistence.storageClass=nfs-client stable/jenkins
+helm install my-jenkins --set master.healthProbes=false --set master.serviceType=NodePort --set persistence.storageClass=nfs-client stable/jenkins -n devops-tools
 ```
 
 N.B : to disable liveness and rideness helt check add --set master.healthProbes=false
+ user: admin
+ password execute this commande to get your pass: 
+ ```
+ printf $(kubectl get secret --namespace devops-tools my-jenkins -o jsonpath="{.data.jenkins-admin-password}" | base64 --decode);echo
+```
 
 watch this videos for more details: https://www.youtube.com/watch?v=qbO4MTESiJQ
 
